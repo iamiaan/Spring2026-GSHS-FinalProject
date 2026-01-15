@@ -27,23 +27,24 @@ $$
 f(w) = \frac{1}{n}\sum_{i=1}^{n} \left(y_i - X_i w\right)^2
 $$
 
-3. **Gradient of the Loss**
-
+3. **Gradient of the Loss**\
 The function `df(w, X, y)` computes the gradient of the loss using the chain rule.
+
 $$
 \nabla f(w) = -\frac{2}{n} X^{T}(y - Xw)
 $$
+
 This is the direction of steepest increase of the loss. Gradient Descent moves in the opposite direction.
 
 4. **Gradient Descent**
-    - You must complete the function `gradient_descent(X, y, lr, tol, max_epochs)`
+    - You must implement the gradient descent algorithm in the function `gradient_descent(X, y, lr, tol, max_epochs)`.
     - For each step, compute the loss and its gradient and update the weights.
-    - Stop when the change in loss is smaller than tol.
+    - Stop when the change in loss is smaller than tolerance.
 ```
 w = w − lr * ∂f(w)/∂w
 ```
     
-5. **Plotting**
+5. **Plotting**\
 The function `plot_graphs(...)` is provided to visualize results.
 
 ## Experiments

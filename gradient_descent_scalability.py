@@ -78,7 +78,7 @@ def df(w, X, y):
     y_pred = X @ w
     return (-2 / n) * X.T @ (y - y_pred)
 
-def gradient_descent(X, y, lr=0.1, tol=1e-6, max_epochs=5000):
+def gradient_descent(X, y, lr=0.1, tolerance=1e-6, max_epochs=5000):
     """
     Performs Full Batch Gradient Descent to minimize the Mean Squared Error (MSE)
     loss for a linear regression model.
